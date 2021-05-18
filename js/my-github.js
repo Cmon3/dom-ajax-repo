@@ -12,7 +12,9 @@ function render(data) {
 
   data.forEach(repo => {
     const listEl = document.createElement("li");
-    listEl.innerHTML = repo.full_name;
+    listEl.innerHTML = `<a href="${repo.html_url}" target="_blank">${
+      repo.name
+    }</a>`;
     repoListEl.appendChild(listEl);
   });
 }
